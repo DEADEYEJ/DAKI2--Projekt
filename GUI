@@ -1,0 +1,101 @@
+import sys
+import os
+import subprocess
+from PyQt5.QtWidgets import (
+    QApplication, QWidget, QTextEdit, QPushButton,
+    QLabel, QVBoxLayout, QHBoxLayout, QTableWidget, QTableWidgetItem, QHeaderView
+)
+from PyQt5.QtCore import Qt, QLibraryInfo
+
+
+class UIOutline(QWidget):
+    def __init__(self):
+        super().__init__()
+
+        self.setWindowTitle("PII Tool (Outline)")
+        self.setGeometry(100, 100, 900, 450)
+
+        main_layout = QVBoxLayout()
+        content_layout = QHBoxLayout()
+
+        # 🔹 LEFT (Input)
+        left_layout = QVBoxLayout()
+
+        left_label = QLabel("Input Text")
+        left_label.setStyleSheet("font-weight: bold; font-size: 12px;")
+        left_label.setAlignment(Qt.AlignCenter)
+
+        self.input_box = QTextEdit()
+        self.input_box.setPlaceholderText("input text here...")
+
+        left_layout.addWidget(left_label)
+        left_layout.addWidget(self.input_box)
+
+        # 🔹 CENTER (Arrow)
+        arrow = QLabel("→")
+        arrow.setAlignment(Qt.AlignCenter)
+        arrow.setStyleSheet("font-size: 40px;")
+
+        # 🔹 RIGHT (Table)
+        right_layout = QVBoxLayout()
+
+        right_label = QLabel("Output labels og values")
+        right_label.setStyleSheet("font-weight: bold; font-size: 12px;")
+        right_label.setAlignment(Qt.AlignCenter)
+
+        self.table = QTableWidget(10, 2)
+        self.table.setHorizontalHeaderLabels(["Label", "Value"])
+        
+        # Make columns fill available space
+        self.table.horizontalHeader().setStretchLastSection(True)
+        self.table.horizontalHeader().setSectionResizeMode(0, QHeaderView.Stretch)
+        self.table.horizontalHeader().setSectionResizeMode(1, QHeaderView.Stretch)
+        
+        # Add empty rows
+        for i in range(10):
+            self.table.setItem(i, 0, QTableWidgetItem(""))
+            self.table.setItem(i, 1, QTableWidgetItem(""))
+
+        right_layout.addWidget(right_label)
+        right_layout.addWidget(self.table)
+
+        # 🔹 Combine layouts
+        content_layout.addLayout(left_layout, 3)
+        content_layout.addWidget(arrow, 1)
+        content_layout.addLayout(right_layout, 3)
+
+        # 🔹 Button
+        self.button = QPushButton("Process")
+        self.button.setFixedWidth(150)
+
+        # Center button
+        button_layout = QHBoxLayout()
+        button_layout.addStretch()
+        button_layout.addWidget(self.button)
+        button_layout.addStretch()
+
+        # 🔹 Main layout
+        main_layout.addLayout(content_layout)
+        main_layout.addLayout(button_layout)
+
+        self.setLayout(main_layout)
+
+
+if __name__ == "__main__":
+    # If started from .venv (known to crash on this Mac), relaunch with pyqt-env.
+    current_python = sys.executable
+    conda_pyqt_python = "/opt/miniconda3/envs/pyqt-env/bin/python"
+    if ".venv/bin/python" in current_python and os.path.exists(conda_pyqt_python):
+        subprocess.Popen([conda_pyqt_python, os.path.abspath(__file__)])
+        sys.exit(0)
+
+    # Fix macOS plugin path issues ("Could not find the Qt platform plugin 'cocoa'")
+    plugins_path = QLibraryInfo.location(QLibraryInfo.PluginsPath)
+    platforms_path = os.path.join(plugins_path, "platforms")
+    if os.path.isdir(platforms_path):
+        os.environ.setdefault("QT_QPA_PLATFORM_PLUGIN_PATH", platforms_path)
+
+    app = QApplication(sys.argv)
+    window = UIOutline()
+    window.show()
+    sys.exit(app.exec_())
