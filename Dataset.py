@@ -2,7 +2,7 @@ import pandas as pd
 import re
 from collections import Counter
 
-df = pd.read_csv('train-00000-of-00001.csv')
+df = pd.read_parquet('train-00000-of-00001.parquet')
 print(df.head())  # Displays the first 5 rows
 
 # Extract all labels from the 'privacy' column

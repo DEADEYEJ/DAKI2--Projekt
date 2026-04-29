@@ -29,7 +29,7 @@ patterns = {
     "ROUTING_NUMBER": r"\b\d{9}\b",
     "API_KEY": r"[A-Za-z0-9]{32,40}",
     "TAX_NUMBER": r"\b\d{8,15}\b",
-    "PASSWORD": r"(?i)\b(?:password|pwd|passcode)\b\s*[:=]\s*['\"]?([^\s'\"]{6,})['\"]?",
+    "PASSWORD": r".{8,}",
     "SSN": r"\b\d{3}-\d{2}-\d{4}\b|\b\d{9}\b",
     "IPV4": r"\b(?:(?:25[0-5]|2[0-4]\d|1?\d?\d)\.){3}(?:25[0-5]|2[0-4]\d|1?\d?\d)\b",
     "IPV6": r"\b(?:[0-9a-fA-F]{1,4}:){7}[0-9a-fA-F]{1,4}\b"

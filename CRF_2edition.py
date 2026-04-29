@@ -18,16 +18,16 @@ from sklearn_crfsuite import metrics
 # KONFIGURATION
 # ============================================================
 
-PARQUET_PATH = "0000.parquet"   # ændr til din filsti
+PARQUET_PATH = "train-00000-of-00001.parquet"   # ændr til din filsti
 MODEL_OUTPUT_PATH = "crf_pii_model.pkl"
 RANDOM_STATE = 42
 
 # Hvis du vil teste hurtigere under udvikling, kan du sætte en grænse.
 # Sæt til None for at bruge hele datasættet.
-MAX_ROWS = 100000
+MAX_ROWS = 10000
 
 # Hvor mange eksempel-forudsigelser der skal vises til sidst
-N_EXAMPLES_TO_SHOW = 5
+N_EXAMPLES_TO_SHOW = 0
 
 
 # ============================================================
@@ -638,26 +638,26 @@ def main() -> None:
     print(metrics.flat_classification_report(y_test, y_test_pred, digits=3))
 
     # Entity-level evaluering
-    val_entity_scores = evaluate_entity_level(val_df, val_tokens, y_val_pred)
-    test_entity_scores = evaluate_entity_level(test_df, test_tokens, y_test_pred)
+#    val_entity_scores = evaluate_entity_level(val_df, val_tokens, y_val_pred)
+#    test_entity_scores = evaluate_entity_level(test_df, test_tokens, y_test_pred)
 
-    print("\n" + "=" * 80)
-    print("ENTITY-LEVEL EVALUERING - VALIDATION")
-    print("=" * 80)
-    for k, v in val_entity_scores.items():
-        print(f"{k}: {v}")
+#    print("\n" + "=" * 80)
+#    print("ENTITY-LEVEL EVALUERING - VALIDATION")
+#    print("=" * 80)
+#    for k, v in val_entity_scores.items():
+#        print(f"{k}: {v}")
 
-    print("\n" + "=" * 80)
-    print("ENTITY-LEVEL EVALUERING - TEST")
-    print("=" * 80)
-    for k, v in test_entity_scores.items():
-        print(f"{k}: {v}")
+#    print("\n" + "=" * 80)
+#    print("ENTITY-LEVEL EVALUERING - TEST")
+#    print("=" * 80)
+#    for k, v in test_entity_scores.items():
+#        print(f"{k}: {v}")
 
     # Gem modellen
-    with open(MODEL_OUTPUT_PATH, "wb") as f:
-        pickle.dump(crf, f)
+    #with open(MODEL_OUTPUT_PATH, "wb") as f:
+    #    pickle.dump(crf, f)
 
-    print(f"\nModel gemt til: {MODEL_OUTPUT_PATH}")
+    #print(f"\nModel gemt til: {MODEL_OUTPUT_PATH}")
 
     # Vis nogle eksempel-forudsigelser fra test
     print_example_predictions(

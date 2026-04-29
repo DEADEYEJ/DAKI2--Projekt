@@ -38,7 +38,7 @@ LABEL_MAP = {
     'STREET': 'STREET_ADDRESS',
 }
 
-CSV_PATH   = 'train-00000-of-00001.csv'
+CSV_PATH   = 'train-00000-of-00001.parquet'
 MODEL_PATH = 'svm_pii_classifier.joblib'
 TEST_SIZE  = 0.20
 RANDOM_STATE = 42
