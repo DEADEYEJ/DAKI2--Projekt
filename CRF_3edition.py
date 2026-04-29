@@ -1,5 +1,5 @@
 from __future__ import annotations
-
+#ikke nyeste version
 import argparse
 import ast
 import gc
