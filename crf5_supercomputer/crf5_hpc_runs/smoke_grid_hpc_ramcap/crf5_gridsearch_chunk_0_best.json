@@ -1,0 +1,13 @@
+{
+  "stage": 1,
+  "config_id": "c1=0.2_c2=0.2_iters=50_transitions=True",
+  "folds_evaluated": 1,
+  "token_macro_f1_mean": 0.0,
+  "entity_f1_mean": 0.0,
+  "runtime_seconds": 0.030628442764282227,
+  "algorithm": "lbfgs",
+  "c1": 0.2,
+  "c2": 0.2,
+  "max_iterations": 50,
+  "all_possible_transitions": true
+}
