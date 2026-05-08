@@ -1,0 +1,48 @@
+{
+  "run_name": "smoke_grid_hpc_ramcap",
+  "chunk_id": 0,
+  "num_chunks": 4,
+  "chunk_grid_size": 38,
+  "args": {
+    "parquet_path": "0000.parquet",
+    "max_rows": 10,
+    "sample_mode": "random",
+    "sample_random_state": 42,
+    "test_size": 0.1,
+    "final_folds": 2,
+    "stage_folds": "1,2",
+    "stage_top_k": "2,1",
+    "primary_metric": "entity_f1",
+    "n_jobs": 4,
+    "max_workers": 4,
+    "memory_limit_gb": 60.0,
+    "parallel_backend": "threading",
+    "drop_noisy_dev_samples": false,
+    "chunk_id": 0,
+    "num_chunks": 4,
+    "output_dir": "C:\\Users\\mmads\\Documents\\UNI\\2_Semester\\P2\\crf5_supercomputer\\crf5_hpc_runs",
+    "run_name": "smoke_grid_hpc_ramcap"
+  },
+  "inner_threads_per_worker": 1,
+  "n_jobs_requested": 4,
+  "max_workers": 4,
+  "n_jobs_after_cap": 4,
+  "memory_limit_gb": 60.0,
+  "memory_limit_status": "unsupported_on_this_platform",
+  "best_result": {
+    "config": {
+      "algorithm": "lbfgs",
+      "c1": 0.1,
+      "c2": 0.5,
+      "max_iterations": 50,
+      "all_possible_transitions": true
+    },
+    "config_id": "c1=0.1_c2=0.5_iters=50_transitions=True",
+    "folds_evaluated": 2,
+    "token_macro_f1_mean": 0.0,
+    "entity_f1_mean": 0.0,
+    "runtime_seconds": 0.19284892082214355,
+    "stage": 2
+  },
+  "total_search_time_seconds": 2.250744342803955
+}
