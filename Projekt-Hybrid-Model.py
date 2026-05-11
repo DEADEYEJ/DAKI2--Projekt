@@ -1,4 +1,4 @@
-#Svm Testfile
+#Hybrid PII Detection Model combining Regex, CRF, and SVM.
 
 import pickle
 import numpy as np
