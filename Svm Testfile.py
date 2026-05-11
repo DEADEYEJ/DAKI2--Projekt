@@ -10,10 +10,10 @@ import warnings
 warnings.filterwarnings("ignore")
 
 # Load model
-with open("crf_pii_model.pkl", "rb") as f:
+with open("pkl-Filer/crf_pii_model_v5.pkl", "rb") as f:
     crf = pickle.load(f)
 
-with open("svm_pii_classifier.pkl","rb") as f:
+with open("pkl-Filer/svm_pii_model.pkl","rb") as f:
     svm = pickle.load(f)
 
 
@@ -31,33 +31,41 @@ def crf_score(model, text):
 
     return 0.5
 
-def svm_score(model, text):
+def svm_score(model, text, target_label=None):
+
     try:
-        if hasattr(model, "predict_proba"):
-            prob = model.predict_proba([text])[0]
-            return float(max(prob))
 
-        if hasattr(model, "decision_function"):
-            score = model.decision_function([text])[0]
-            return float(1 / (1 + np.exp(-score)))
+        preds = model.predict([text])
 
-        if hasattr(model, "predict"):
-            pred = model.predict([text])[0]
+        if not preds:
+            return 0.5
 
-            # handle dict output
-            if isinstance(pred, dict):
-                if "PII" in pred:
-                    return float(pred["PII"])
-                if "confidence" in pred:
-                    return float(pred["confidence"])
-                return float(max(pred.values()))
+        pred = preds[0]
 
+        # Expected PIIClassifier format
+        if isinstance(pred, dict):
+
+            label = pred.get("label")
+            confidence = pred.get("confidence", 0.5)
+
+            # If asking for specific label
+            if target_label is not None:
+                if label == target_label:
+                    return float(confidence)
+                return 0.0
+
+            return float(confidence)
+
+        # Numeric fallback
+        if isinstance(pred, (int, float, np.number)):
             return float(pred)
 
-    except Exception as e:
-        print("SVM error:", e)
+        return 0.5
 
-    return 0.5
+    except Exception:
+        import traceback
+        traceback.print_exc()
+        return 0.5
 
 def combined_score(r, c, s):
     return 0.4 * r + 0.3 * c + 0.3 * s
