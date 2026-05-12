@@ -1,0 +1,1135 @@
+{
+  "meta": {
+    "total_mails": 60,
+    "pii_confidence_threshold": 0.5,
+    "crf_model_path": "E:\\Repos\\UNI\\DAKI2--Projekt\\predict_all_models_bundle\\crf_pii_model_v5.pkl",
+    "svm_model_path": "E:\\Repos\\UNI\\DAKI2--Projekt\\predict_all_models_bundle\\svm\\SVM_supercomputer\\svm_hybrid_hpc_20260511_132650\\svm_pii_classifier.pkl"
+  },
+  "results": [
+    {
+      "mail_index": 1,
+      "mail_preview": "Hi, my email is anna.jensen@gmail.com  and I can’t log in. Customer ID: CUST-29381",
+      "pii_labels_above_0_5": {
+        "EMAIL": 1.0,
+        "CUSTOMER_ID": 0.769557,
+        "PASSPORT_NUMBER": 0.600145,
+        "ID_CARD_NUMBER": 0.551256,
+        "DRIVER_LICENSE_NUMBER": 0.550341,
+        "PIN_NUMBER": 0.503727
+      },
+      "model_predicted_pii": {
+        "regex": true,
+        "crf": true,
+        "svm": true
+      },
+      "model_confidence_scores": {
+        "regex": 0.99,
+        "crf": 0.991499,
+        "svm": 0.999997
+      }
+    },
+    {
+      "mail_index": 2,
+      "mail_preview": "Hi, my card 4111 1211 2111 1111 is not working. CVV: 321.",
+      "pii_labels_above_0_5": {
+        "CREDIT_CARD_NUMBER": 0.979964,
+        "STREET_ADDRESS": 0.789825,
+        "CREDIT_CARD_CVV": 0.562241,
+        "TAX_NUMBER": 0.511776,
+        "PIN_NUMBER": 0.504407
+      },
+      "model_predicted_pii": {
+        "regex": true,
+        "crf": false,
+        "svm": true
+      },
+      "model_confidence_scores": {
+        "regex": 0.97,
+        "crf": 0.282747,
+        "svm": 0.965846
+      }
+    },
+    {
+      "mail_index": 3,
+      "mail_preview": "Hello, My passport number is P12345678 and my tax number is TAX-8839201. Please assist. Thanks, John Carter",
+      "pii_labels_above_0_5": {
+        "ID_CARD_NUMBER": 0.744373,
+        "DRIVER_LICENSE_NUMBER": 0.706585,
+        "PASSPORT_NUMBER": 0.651016
+      },
+      "model_predicted_pii": {
+        "regex": true,
+        "crf": false,
+        "svm": true
+      },
+      "model_confidence_scores": {
+        "regex": 0.6,
+        "crf": 0.447238,
+        "svm": 0.921929
+      }
+    },
+    {
+      "mail_index": 4,
+      "mail_preview": "Hi, My new address is 12 Baker Street, London. Phone: +44 7123 456789 Email: john.carter@gmail.com",
+      "pii_labels_above_0_5": {
+        "EMAIL": 1.0,
+        "PHONE_NUMBER": 0.999993,
+        "STREET_ADDRESS": 0.999623,
+        "PASSPORT_NUMBER": 0.605472,
+        "PIN_NUMBER": 0.559478,
+        "DRIVER_LICENSE_NUMBER": 0.557093,
+        "CREDIT_CARD_CVV": 0.550609,
+        "ID_CARD_NUMBER": 0.550147
+      },
+      "model_predicted_pii": {
+        "regex": true,
+        "crf": true,
+        "svm": true
+      },
+      "model_confidence_scores": {
+        "regex": 0.99,
+        "crf": 0.999101,
+        "svm": 0.999997
+      }
+    },
+    {
+      "mail_index": 5,
+      "mail_preview": "Hi IT support, I cannot access the system from IP 192.168.0.14. Employee ID: EMP-48291",
+      "pii_labels_above_0_5": {
+        "IPV4": 0.999984,
+        "EMPLOYEE_ID": 0.999571,
+        "PASSPORT_NUMBER": 0.600879,
+        "CREDIT_CARD_CVV": 0.567793,
+        "DRIVER_LICENSE_NUMBER": 0.558577,
+        "ID_CARD_NUMBER": 0.550401,
+        "PIN_NUMBER": 0.512156
+      },
+      "model_predicted_pii": {
+        "regex": true,
+        "crf": true,
+        "svm": true
+      },
+      "model_confidence_scores": {
+        "regex": 0.97,
+        "crf": 0.99435,
+        "svm": 0.998906
+      }
+    },
+    {
+      "mail_index": 6,
+      "mail_preview": "Hello, I recently changed banks and need to update my details. IBAN: DE89370400440532013000 SWIFT: DEUTDEFF500 Account n",
+      "pii_labels_above_0_5": {
+        "IBAN": 0.999816,
+        "SWIFT_CODE": 0.996908,
+        "PHONE_NUMBER": 0.920789,
+        "DRIVER_LICENSE_NUMBER": 0.797662,
+        "ACCOUNT_NUMBER": 0.784009,
+        "BANK_ACCOUNT_NUMBER": 0.782839,
+        "TAX_NUMBER": 0.76078,
+        "ID_CARD_NUMBER": 0.67119,
+        "PASSPORT_NUMBER": 0.608879
+      },
+      "model_predicted_pii": {
+        "regex": true,
+        "crf": true,
+        "svm": true
+      },
+      "model_confidence_scores": {
+        "regex": 0.99,
+        "crf": 0.806517,
+        "svm": 0.999132
+      }
+    },
+    {
+      "mail_index": 7,
+      "mail_preview": "Hi support team, My name is Peter Hansen. My email is peter.hansen@mail.com  and phone is +1 415 782 9931. My customer I",
+      "pii_labels_above_0_5": {
+        "EMAIL": 1.0,
+        "PHONE_NUMBER": 0.999996,
+        "CUSTOMER_ID": 0.983916,
+        "STREET_ADDRESS": 0.789727,
+        "DRIVER_LICENSE_NUMBER": 0.787132,
+        "BANK_ACCOUNT_NUMBER": 0.780111,
+        "TAX_NUMBER": 0.765683,
+        "ACCOUNT_NUMBER": 0.762896,
+        "PIN_NUMBER": 0.756848,
+        "ID_CARD_NUMBER": 0.637002,
+        "PASSPORT_NUMBER": 0.630552,
+        "CREDIT_CARD_CVV": 0.613974,
+        "EMPLOYEE_ID": 0.603056
+      },
+      "model_predicted_pii": {
+        "regex": true,
+        "crf": true,
+        "svm": true
+      },
+      "model_confidence_scores": {
+        "regex": 0.99,
+        "crf": 0.999477,
+        "svm": 0.999997
+      }
+    },
+    {
+      "mail_index": 8,
+      "mail_preview": "Hi, I received a login alert from IP 192.168.0.14. My API key is ak_live_7f3c9d1e8b2a4f and should be rotated. Regards, ",
+      "pii_labels_above_0_5": {
+        "IPV4": 0.999989,
+        "CREDIT_CARD_CVV": 0.567788
+      },
+      "model_predicted_pii": {
+        "regex": true,
+        "crf": true,
+        "svm": true
+      },
+      "model_confidence_scores": {
+        "regex": 0.97,
+        "crf": 0.996122,
+        "svm": 0.998906
+      }
+    },
+    {
+      "mail_index": 9,
+      "mail_preview": "Hello, Please verify my details: Name: Sarah Lee SSN: 123-45-6789 Passport: P99881234 Phone: +44 7123 456789 Email: sara",
+      "pii_labels_above_0_5": {
+        "EMAIL": 0.999999,
+        "PHONE_NUMBER": 0.999993,
+        "SOCIAL_SECURITY_NUMBER": 0.999929,
+        "PASSPORT_NUMBER": 0.878797,
+        "STREET_ADDRESS": 0.828545,
+        "ID_CARD_NUMBER": 0.781196,
+        "DRIVER_LICENSE_NUMBER": 0.740024,
+        "PIN_NUMBER": 0.55975,
+        "CREDIT_CARD_CVV": 0.553261
+      },
+      "model_predicted_pii": {
+        "regex": true,
+        "crf": true,
+        "svm": true
+      },
+      "model_confidence_scores": {
+        "regex": 0.99,
+        "crf": 0.988452,
+        "svm": 0.999999
+      }
+    },
+    {
+      "mail_index": 10,
+      "mail_preview": "Hi support team, I need to update all my account details due to relocation. My current information:  Name: John Carter E",
+      "pii_labels_above_0_5": {
+        "EMAIL": 1.0,
+        "PHONE_NUMBER": 1.0,
+        "CREDIT_CARD_NUMBER": 0.999951,
+        "IPV4": 0.999947,
+        "STREET_ADDRESS": 0.996258,
+        "CUSTOMER_ID": 0.988466,
+        "PIN_NUMBER": 0.756857,
+        "DRIVER_LICENSE_NUMBER": 0.69805,
+        "CREDIT_CARD_CVV": 0.615141,
+        "ID_CARD_NUMBER": 0.608678,
+        "PASSPORT_NUMBER": 0.604962,
+        "EMPLOYEE_ID": 0.567222
+      },
+      "model_predicted_pii": {
+        "regex": true,
+        "crf": true,
+        "svm": true
+      },
+      "model_confidence_scores": {
+        "regex": 0.99,
+        "crf": 0.999949,
+        "svm": 1.0
+      }
+    },
+    {
+      "mail_index": 11,
+      "mail_preview": "Hi, I’m having trouble logging in as John Carter (username: jcarter92). I think the issue started on March 12th.",
+      "pii_labels_above_0_5": {},
+      "model_predicted_pii": {
+        "regex": false,
+        "crf": false,
+        "svm": false
+      },
+      "model_confidence_scores": {
+        "regex": 0.0,
+        "crf": 0.000325,
+        "svm": 0.0
+      }
+    },
+    {
+      "mail_index": 12,
+      "mail_preview": "Hello, I tried to pay on Amazon yesterday but the checkout failed. Order date: 01/02/2025",
+      "pii_labels_above_0_5": {
+        "CREDIT_CARD_CVV": 0.55,
+        "PIN_NUMBER": 0.500012
+      },
+      "model_predicted_pii": {
+        "regex": true,
+        "crf": false,
+        "svm": false
+      },
+      "model_confidence_scores": {
+        "regex": 0.55,
+        "crf": 4.2e-05,
+        "svm": 3.6e-05
+      }
+    },
+    {
+      "mail_index": 13,
+      "mail_preview": "Hi support team, My account under the name Sarah Lee is locked. It was created on June 2023.",
+      "pii_labels_above_0_5": {
+        "CREDIT_CARD_CVV": 0.55,
+        "PIN_NUMBER": 0.500001
+      },
+      "model_predicted_pii": {
+        "regex": true,
+        "crf": false,
+        "svm": false
+      },
+      "model_confidence_scores": {
+        "regex": 0.55,
+        "crf": 3.8e-05,
+        "svm": 0.0
+      }
+    },
+    {
+      "mail_index": 14,
+      "mail_preview": "Hello, I am an employee at NordTech Solutions and I cannot access the dashboard. This started after the update on Monday",
+      "pii_labels_above_0_5": {},
+      "model_predicted_pii": {
+        "regex": false,
+        "crf": false,
+        "svm": false
+      },
+      "model_confidence_scores": {
+        "regex": 0.0,
+        "crf": 4.8e-05,
+        "svm": 0.0
+      }
+    },
+    {
+      "mail_index": 15,
+      "mail_preview": "Hi, My username is mark_dev99 and I am experiencing issues with the system. Last login was yesterday at 14:00.",
+      "pii_labels_above_0_5": {},
+      "model_predicted_pii": {
+        "regex": false,
+        "crf": false,
+        "svm": false
+      },
+      "model_confidence_scores": {
+        "regex": 0.0,
+        "crf": 0.001435,
+        "svm": 0.0
+      }
+    },
+    {
+      "mail_index": 16,
+      "mail_preview": "Hello support, I am contacting you regarding my profile as Emma Johnson. The issue started after I changed settings on F",
+      "pii_labels_above_0_5": {},
+      "model_predicted_pii": {
+        "regex": false,
+        "crf": false,
+        "svm": false
+      },
+      "model_confidence_scores": {
+        "regex": 0.0,
+        "crf": 0.000576,
+        "svm": 0.0
+      }
+    },
+    {
+      "mail_index": 17,
+      "mail_preview": "Hi, My profile name is Michael Brown and I cannot access certain features. The problem began after the update released i",
+      "pii_labels_above_0_5": {
+        "CREDIT_CARD_CVV": 0.550002,
+        "PIN_NUMBER": 0.500013
+      },
+      "model_predicted_pii": {
+        "regex": true,
+        "crf": false,
+        "svm": false
+      },
+      "model_confidence_scores": {
+        "regex": 0.55,
+        "crf": 0.060814,
+        "svm": 3.6e-05
+      }
+    },
+    {
+      "mail_index": 18,
+      "mail_preview": "Hello support team, I’m a user called tech_guy_88, and I noticed errors after the deployment on March 3rd, 2025. I work ",
+      "pii_labels_above_0_5": {
+        "CREDIT_CARD_CVV": 0.55,
+        "PIN_NUMBER": 0.50003
+      },
+      "model_predicted_pii": {
+        "regex": true,
+        "crf": false,
+        "svm": false
+      },
+      "model_confidence_scores": {
+        "regex": 0.55,
+        "crf": 0.069125,
+        "svm": 3.6e-05
+      }
+    },
+    {
+      "mail_index": 19,
+      "mail_preview": "Hi, My account (registered under Anna Schmidt) is showing errors. This started after I joined the company in August 2022",
+      "pii_labels_above_0_5": {
+        "CREDIT_CARD_CVV": 0.55
+      },
+      "model_predicted_pii": {
+        "regex": true,
+        "crf": false,
+        "svm": false
+      },
+      "model_confidence_scores": {
+        "regex": 0.55,
+        "crf": 0.00139,
+        "svm": 0.0
+      }
+    },
+    {
+      "mail_index": 20,
+      "mail_preview": "Hi customer support, I am David Wilson, and I am experiencing issues with my system access. My username is david_w_2024,",
+      "pii_labels_above_0_5": {
+        "CREDIT_CARD_CVV": 0.55,
+        "PIN_NUMBER": 0.500104
+      },
+      "model_predicted_pii": {
+        "regex": true,
+        "crf": false,
+        "svm": false
+      },
+      "model_confidence_scores": {
+        "regex": 0.55,
+        "crf": 0.007861,
+        "svm": 3.6e-05
+      }
+    },
+    {
+      "mail_index": 21,
+      "mail_preview": "Hi support team, I have been trying to access my account for the past few days without success. I usually log in during ",
+      "pii_labels_above_0_5": {
+        "EMAIL": 1.0
+      },
+      "model_predicted_pii": {
+        "regex": true,
+        "crf": true,
+        "svm": true
+      },
+      "model_confidence_scores": {
+        "regex": 0.99,
+        "crf": 0.997019,
+        "svm": 0.999997
+      }
+    },
+    {
+      "mail_index": 22,
+      "mail_preview": "Hello, I tried calling support but couldn’t get through. I waited for quite a long time and decided to write instead. Th",
+      "pii_labels_above_0_5": {
+        "PHONE_NUMBER": 0.999995,
+        "STREET_ADDRESS": 0.921775
+      },
+      "model_predicted_pii": {
+        "regex": true,
+        "crf": true,
+        "svm": true
+      },
+      "model_confidence_scores": {
+        "regex": 0.92,
+        "crf": 0.998645,
+        "svm": 0.99999
+      }
+    },
+    {
+      "mail_index": 23,
+      "mail_preview": "Hi IT support, I am experiencing issues connecting to the internal dashboard from home. At the office everything works f",
+      "pii_labels_above_0_5": {
+        "IPV4": 0.999961,
+        "CREDIT_CARD_CVV": 0.567806
+      },
+      "model_predicted_pii": {
+        "regex": true,
+        "crf": true,
+        "svm": true
+      },
+      "model_confidence_scores": {
+        "regex": 0.97,
+        "crf": 0.986031,
+        "svm": 0.998906
+      }
+    },
+    {
+      "mail_index": 24,
+      "mail_preview": "Hi support, My recent delivery did not arrive at the correct location. I suspect there might be an issue in the address ",
+      "pii_labels_above_0_5": {
+        "STREET_ADDRESS": 0.988414
+      },
+      "model_predicted_pii": {
+        "regex": true,
+        "crf": false,
+        "svm": true
+      },
+      "model_confidence_scores": {
+        "regex": 0.72,
+        "crf": 0.273024,
+        "svm": 0.981732
+      }
+    },
+    {
+      "mail_index": 25,
+      "mail_preview": "Hi support team, I attempted to complete a payment yesterday, but the transaction kept failing without explanation. I tr",
+      "pii_labels_above_0_5": {
+        "CREDIT_CARD_NUMBER": 0.996983,
+        "STREET_ADDRESS": 0.901821,
+        "CREDIT_CARD_CVV": 0.550052,
+        "PIN_NUMBER": 0.505118
+      },
+      "model_predicted_pii": {
+        "regex": true,
+        "crf": true,
+        "svm": true
+      },
+      "model_confidence_scores": {
+        "regex": 0.97,
+        "crf": 0.860957,
+        "svm": 0.738793
+      }
+    },
+    {
+      "mail_index": 26,
+      "mail_preview": "Hello, I am working on integrating your API into our system, but authentication keeps failing even though everything app",
+      "pii_labels_above_0_5": {},
+      "model_predicted_pii": {
+        "regex": false,
+        "crf": false,
+        "svm": false
+      },
+      "model_confidence_scores": {
+        "regex": 0.0,
+        "crf": 0.210668,
+        "svm": 0.0
+      }
+    },
+    {
+      "mail_index": 27,
+      "mail_preview": "Hello support, I was asked to verify my identity again even though I already completed the process earlier this year.  M",
+      "pii_labels_above_0_5": {
+        "SOCIAL_SECURITY_NUMBER": 0.999885,
+        "CREDIT_CARD_CVV": 0.553264,
+        "PIN_NUMBER": 0.500351
+      },
+      "model_predicted_pii": {
+        "regex": true,
+        "crf": true,
+        "svm": true
+      },
+      "model_confidence_scores": {
+        "regex": 0.97,
+        "crf": 0.97579,
+        "svm": 0.978296
+      }
+    },
+    {
+      "mail_index": 28,
+      "mail_preview": "Hello, I recently changed bank accounts and need to update my payment details in your system.  IBAN: DE89370400440532013",
+      "pii_labels_above_0_5": {
+        "IBAN": 0.999816,
+        "SWIFT_CODE": 0.997233,
+        "PASSPORT_NUMBER": 0.602878,
+        "ID_CARD_NUMBER": 0.569845,
+        "DRIVER_LICENSE_NUMBER": 0.559082
+      },
+      "model_predicted_pii": {
+        "regex": true,
+        "crf": true,
+        "svm": true
+      },
+      "model_confidence_scores": {
+        "regex": 0.99,
+        "crf": 0.806517,
+        "svm": 0.999132
+      }
+    },
+    {
+      "mail_index": 29,
+      "mail_preview": "Hi, A transfer I made yesterday did not go through. The funds were deducted but not received.  Bank account number: 8839",
+      "pii_labels_above_0_5": {
+        "IBAN": 0.999689,
+        "PHONE_NUMBER": 0.920784,
+        "ACCOUNT_NUMBER": 0.787825,
+        "BANK_ACCOUNT_NUMBER": 0.782941,
+        "DRIVER_LICENSE_NUMBER": 0.778426,
+        "TAX_NUMBER": 0.756772,
+        "ID_CARD_NUMBER": 0.604182
+      },
+      "model_predicted_pii": {
+        "regex": true,
+        "crf": true,
+        "svm": true
+      },
+      "model_confidence_scores": {
+        "regex": 0.99,
+        "crf": 0.673877,
+        "svm": 0.999132
+      }
+    },
+    {
+      "mail_index": 30,
+      "mail_preview": "Hi HR team, My employee record appears to be incomplete in the system after the recent update.  Employee ID: EMP-48291 C",
+      "pii_labels_above_0_5": {
+        "EMPLOYEE_ID": 0.999515,
+        "CUSTOMER_ID": 0.986143,
+        "STREET_ADDRESS": 0.822699,
+        "PASSPORT_NUMBER": 0.611039,
+        "DRIVER_LICENSE_NUMBER": 0.558683,
+        "ID_CARD_NUMBER": 0.551123,
+        "PIN_NUMBER": 0.512335
+      },
+      "model_predicted_pii": {
+        "regex": true,
+        "crf": true,
+        "svm": true
+      },
+      "model_confidence_scores": {
+        "regex": 0.72,
+        "crf": 0.992411,
+        "svm": 0.991654
+      }
+    },
+    {
+      "mail_index": 31,
+      "mail_preview": "Hi, The configuration points to 12 main pipeline stage in the system, which seems to be incorrectly mapped in the enviro",
+      "pii_labels_above_0_5": {
+        "STREET_ADDRESS": 0.788945
+      },
+      "model_predicted_pii": {
+        "regex": true,
+        "crf": false,
+        "svm": false
+      },
+      "model_confidence_scores": {
+        "regex": 0.72,
+        "crf": 0.000396,
+        "svm": 0.269433
+      }
+    },
+    {
+      "mail_index": 32,
+      "mail_preview": "Hello, We found an entry labeled EMP-TEST-48291A in the logs, but it appears to be a test artifact rather than a real id",
+      "pii_labels_above_0_5": {
+        "ID_CARD_NUMBER": 0.625244,
+        "PASSPORT_NUMBER": 0.604814,
+        "DRIVER_LICENSE_NUMBER": 0.577338
+      },
+      "model_predicted_pii": {
+        "regex": true,
+        "crf": false,
+        "svm": true
+      },
+      "model_confidence_scores": {
+        "regex": 0.6,
+        "crf": 0.053399,
+        "svm": 0.642662
+      }
+    },
+    {
+      "mail_index": 33,
+      "mail_preview": "Hello, We are currently using Microsoft services in our workflow and are trying to optimize performance across teams. No",
+      "pii_labels_above_0_5": {},
+      "model_predicted_pii": {
+        "regex": false,
+        "crf": false,
+        "svm": false
+      },
+      "model_confidence_scores": {
+        "regex": 0.0,
+        "crf": 1.3e-05,
+        "svm": 0.0
+      }
+    },
+    {
+      "mail_index": 34,
+      "mail_preview": "Hello, Users are instructed to contact support using help(at)company(dot)com format due to spam protection rules.",
+      "pii_labels_above_0_5": {},
+      "model_predicted_pii": {
+        "regex": false,
+        "crf": false,
+        "svm": false
+      },
+      "model_confidence_scores": {
+        "regex": 0.0,
+        "crf": 0.000658,
+        "svm": 0.0
+      }
+    },
+    {
+      "mail_index": 35,
+      "mail_preview": "Hi, Our dev environment includes sample users like test_user_alpha and demo_account_beta for load testing purposes.",
+      "pii_labels_above_0_5": {},
+      "model_predicted_pii": {
+        "regex": false,
+        "crf": false,
+        "svm": false
+      },
+      "model_confidence_scores": {
+        "regex": 0.0,
+        "crf": 0.000286,
+        "svm": 0.0
+      }
+    },
+    {
+      "mail_index": 36,
+      "mail_preview": "Hello, I would like to confirm that my request has been received.",
+      "pii_labels_above_0_5": {},
+      "model_predicted_pii": {
+        "regex": false,
+        "crf": false,
+        "svm": false
+      },
+      "model_confidence_scores": {
+        "regex": 0.0,
+        "crf": 2.9e-05,
+        "svm": 0.0
+      }
+    },
+    {
+      "mail_index": 37,
+      "mail_preview": "Hej support, Min betaling gik ikke igennem. Kan I tjekke status?",
+      "pii_labels_above_0_5": {},
+      "model_predicted_pii": {
+        "regex": false,
+        "crf": false,
+        "svm": false
+      },
+      "model_confidence_scores": {
+        "regex": 0.0,
+        "crf": 4.3e-05,
+        "svm": 0.0
+      }
+    },
+    {
+      "mail_index": 38,
+      "mail_preview": "Hej, Der er ændringer i Q1 2025 analyse cyklus, men det er kun staging data.",
+      "pii_labels_above_0_5": {
+        "STREET_ADDRESS": 0.72148,
+        "CREDIT_CARD_CVV": 0.550003,
+        "PIN_NUMBER": 0.500014
+      },
+      "model_predicted_pii": {
+        "regex": true,
+        "crf": false,
+        "svm": false
+      },
+      "model_confidence_scores": {
+        "regex": 0.72,
+        "crf": 0.002611,
+        "svm": 0.005809
+      }
+    },
+    {
+      "mail_index": 39,
+      "mail_preview": "Hej, Vi bruger testkontoen user_demo_88 i vores udviklingsmiljø.",
+      "pii_labels_above_0_5": {},
+      "model_predicted_pii": {
+        "regex": false,
+        "crf": false,
+        "svm": false
+      },
+      "model_confidence_scores": {
+        "regex": 0.0,
+        "crf": 0.044408,
+        "svm": 0.0
+      }
+    },
+    {
+      "mail_index": 40,
+      "mail_preview": "Hej, Jeg kan ikke logge ind med mit brugernavn anders_test2024, selvom alt ellers virker.",
+      "pii_labels_above_0_5": {},
+      "model_predicted_pii": {
+        "regex": false,
+        "crf": false,
+        "svm": false
+      },
+      "model_confidence_scores": {
+        "regex": 0.0,
+        "crf": 0.006803,
+        "svm": 0.0
+      }
+    },
+    {
+      "mail_index": 41,
+      "mail_preview": "Hello Support Team,  I have been unable to access my account since yesterday evening. I tried resetting the password twi",
+      "pii_labels_above_0_5": {
+        "EMAIL": 0.999998,
+        "PHONE_NUMBER": 0.999914,
+        "CUSTOMER_ID": 0.991549,
+        "STREET_ADDRESS": 0.963701,
+        "CREDIT_CARD_CVV": 0.650905,
+        "PASSPORT_NUMBER": 0.600283,
+        "PIN_NUMBER": 0.596598,
+        "EMPLOYEE_ID": 0.572036,
+        "DRIVER_LICENSE_NUMBER": 0.564459,
+        "ID_CARD_NUMBER": 0.552014
+      },
+      "model_predicted_pii": {
+        "regex": true,
+        "crf": true,
+        "svm": true
+      },
+      "model_confidence_scores": {
+        "regex": 0.99,
+        "crf": 0.956819,
+        "svm": 0.999882
+      }
+    },
+    {
+      "mail_index": 42,
+      "mail_preview": "Dear Customer Service,  I noticed an unexpected charge on my monthly statement and wanted to request clarification. The ",
+      "pii_labels_above_0_5": {
+        "EMAIL": 1.0,
+        "STREET_ADDRESS": 0.999883,
+        "PIN_NUMBER": 0.618498,
+        "PASSPORT_NUMBER": 0.600283,
+        "CREDIT_CARD_CVV": 0.550983,
+        "DRIVER_LICENSE_NUMBER": 0.550818,
+        "ID_CARD_NUMBER": 0.550594
+      },
+      "model_predicted_pii": {
+        "regex": true,
+        "crf": true,
+        "svm": true
+      },
+      "model_confidence_scores": {
+        "regex": 0.99,
+        "crf": 0.995708,
+        "svm": 1.0
+      }
+    },
+    {
+      "mail_index": 43,
+      "mail_preview": "Hi Support,  I am writing regarding order ORD-558193. The package was expected to arrive three days ago, but the trackin",
+      "pii_labels_above_0_5": {
+        "EMAIL": 1.0,
+        "PIN_NUMBER": 0.635857,
+        "PASSPORT_NUMBER": 0.602854,
+        "ID_CARD_NUMBER": 0.561391,
+        "DRIVER_LICENSE_NUMBER": 0.55185
+      },
+      "model_predicted_pii": {
+        "regex": true,
+        "crf": true,
+        "svm": true
+      },
+      "model_confidence_scores": {
+        "regex": 0.99,
+        "crf": 0.989484,
+        "svm": 0.999999
+      }
+    },
+    {
+      "mail_index": 44,
+      "mail_preview": "Hello,  I recently changed my phone number and would like to update the information linked to my profile. The old number",
+      "pii_labels_above_0_5": {
+        "EMAIL": 0.999997,
+        "PHONE_NUMBER": 0.999857,
+        "STREET_ADDRESS": 0.923074,
+        "SOCIAL_SECURITY_NUMBER": 0.771358,
+        "PASSPORT_NUMBER": 0.604479,
+        "DRIVER_LICENSE_NUMBER": 0.571891,
+        "ID_CARD_NUMBER": 0.550571,
+        "CREDIT_CARD_CVV": 0.550129,
+        "PIN_NUMBER": 0.514356
+      },
+      "model_predicted_pii": {
+        "regex": true,
+        "crf": true,
+        "svm": true
+      },
+      "model_confidence_scores": {
+        "regex": 0.99,
+        "crf": 0.937578,
+        "svm": 0.999985
+      }
+    },
+    {
+      "mail_index": 45,
+      "mail_preview": "Dear Support Team,  Every time I attempt to download my invoice history, the page refreshes without generating the PDF f",
+      "pii_labels_above_0_5": {
+        "EMAIL": 1.0,
+        "STREET_ADDRESS": 0.774375,
+        "PASSPORT_NUMBER": 0.600266,
+        "PIN_NUMBER": 0.562906,
+        "ID_CARD_NUMBER": 0.552801,
+        "DRIVER_LICENSE_NUMBER": 0.550819
+      },
+      "model_predicted_pii": {
+        "regex": true,
+        "crf": true,
+        "svm": true
+      },
+      "model_confidence_scores": {
+        "regex": 0.99,
+        "crf": 0.999483,
+        "svm": 0.999997
+      }
+    },
+    {
+      "mail_index": 46,
+      "mail_preview": "Hi,  I submitted a request to cancel my subscription yesterday but have not yet received a confirmation email. I just wa",
+      "pii_labels_above_0_5": {
+        "EMAIL": 1.0,
+        "STREET_ADDRESS": 0.874644,
+        "PASSPORT_NUMBER": 0.600056,
+        "ID_CARD_NUMBER": 0.55038,
+        "DRIVER_LICENSE_NUMBER": 0.550204,
+        "PIN_NUMBER": 0.527059
+      },
+      "model_predicted_pii": {
+        "regex": true,
+        "crf": true,
+        "svm": true
+      },
+      "model_confidence_scores": {
+        "regex": 0.99,
+        "crf": 0.997052,
+        "svm": 0.999999
+      }
+    },
+    {
+      "mail_index": 47,
+      "mail_preview": "Hello Support,  The password reset link sent to my inbox appears to expire immediately after opening it. I requested mul",
+      "pii_labels_above_0_5": {
+        "EMAIL": 0.999999,
+        "PHONE_NUMBER": 0.999988,
+        "STREET_ADDRESS": 0.740894,
+        "CREDIT_CARD_CVV": 0.650912,
+        "PIN_NUMBER": 0.571036
+      },
+      "model_predicted_pii": {
+        "regex": true,
+        "crf": true,
+        "svm": true
+      },
+      "model_confidence_scores": {
+        "regex": 0.99,
+        "crf": 0.986096,
+        "svm": 0.999997
+      }
+    },
+    {
+      "mail_index": 48,
+      "mail_preview": "Dear Team,  I noticed that my recent purchase appears twice in the account dashboard, although I only completed checkout",
+      "pii_labels_above_0_5": {
+        "EMAIL": 1.0,
+        "PIN_NUMBER": 0.603803,
+        "PASSPORT_NUMBER": 0.600498,
+        "ID_CARD_NUMBER": 0.554378,
+        "DRIVER_LICENSE_NUMBER": 0.553413,
+        "ACCOUNT_NUMBER": 0.508139
+      },
+      "model_predicted_pii": {
+        "regex": true,
+        "crf": true,
+        "svm": true
+      },
+      "model_confidence_scores": {
+        "regex": 0.99,
+        "crf": 0.997136,
+        "svm": 1.0
+      }
+    },
+    {
+      "mail_index": 49,
+      "mail_preview": "Hello,  I would like to request a downloadable export of my account activity for the past six months.  Registered detail",
+      "pii_labels_above_0_5": {
+        "EMAIL": 1.0,
+        "PIN_NUMBER": 0.647098,
+        "PASSPORT_NUMBER": 0.601649,
+        "ID_CARD_NUMBER": 0.555627,
+        "DRIVER_LICENSE_NUMBER": 0.551368
+      },
+      "model_predicted_pii": {
+        "regex": true,
+        "crf": true,
+        "svm": true
+      },
+      "model_confidence_scores": {
+        "regex": 0.99,
+        "crf": 0.998994,
+        "svm": 0.99974
+      }
+    },
+    {
+      "mail_index": 50,
+      "mail_preview": "Subject: Issue with Two-Factor Authentication  Hi Customer Support,  I am currently locked out because the two-factor au",
+      "pii_labels_above_0_5": {
+        "EMAIL": 1.0,
+        "PHONE_NUMBER": 0.999996,
+        "STREET_ADDRESS": 0.944366,
+        "CREDIT_CARD_CVV": 0.614844
+      },
+      "model_predicted_pii": {
+        "regex": true,
+        "crf": true,
+        "svm": true
+      },
+      "model_confidence_scores": {
+        "regex": 0.99,
+        "crf": 0.997187,
+        "svm": 0.999983
+      }
+    },
+    {
+      "mail_index": 51,
+      "mail_preview": "Hello Support,  I noticed that some sections of the dashboard appear to update more slowly than usual today. The informa",
+      "pii_labels_above_0_5": {},
+      "model_predicted_pii": {
+        "regex": false,
+        "crf": false,
+        "svm": false
+      },
+      "model_confidence_scores": {
+        "regex": 0.0,
+        "crf": 4.2e-05,
+        "svm": 0.0
+      }
+    },
+    {
+      "mail_index": 52,
+      "mail_preview": "Hi Team,  Some of the notifications displayed in the activity center appear misaligned after the latest interface update",
+      "pii_labels_above_0_5": {},
+      "model_predicted_pii": {
+        "regex": false,
+        "crf": false,
+        "svm": false
+      },
+      "model_confidence_scores": {
+        "regex": 0.0,
+        "crf": 6.1e-05,
+        "svm": 0.0
+      }
+    },
+    {
+      "mail_index": 53,
+      "mail_preview": "Dear Support,  The application occasionally hangs while loading reports. Refreshing the page usually resolves the issue,",
+      "pii_labels_above_0_5": {},
+      "model_predicted_pii": {
+        "regex": false,
+        "crf": false,
+        "svm": false
+      },
+      "model_confidence_scores": {
+        "regex": 0.0,
+        "crf": 4.1e-05,
+        "svm": 0.0
+      }
+    },
+    {
+      "mail_index": 54,
+      "mail_preview": "Hello,  After submitting a recent request through the portal, the usual confirmation message did not appear. The action ",
+      "pii_labels_above_0_5": {},
+      "model_predicted_pii": {
+        "regex": false,
+        "crf": false,
+        "svm": false
+      },
+      "model_confidence_scores": {
+        "regex": 0.0,
+        "crf": 7.6e-05,
+        "svm": 0.0
+      }
+    },
+    {
+      "mail_index": 55,
+      "mail_preview": "Hej support,  Jeg ville bare nævne, at den danske oversættelse i nogle menuer virker en smule ujævn. Enkelte beskrivelse",
+      "pii_labels_above_0_5": {},
+      "model_predicted_pii": {
+        "regex": false,
+        "crf": false,
+        "svm": false
+      },
+      "model_confidence_scores": {
+        "regex": 0.0,
+        "crf": 0.000424,
+        "svm": 0.0
+      }
+    },
+    {
+      "mail_index": 56,
+      "mail_preview": "Hej,  Jeg oplever, at siden nogle gange reagerer langsomt, især når flere faner er åbne samtidig. Problemet forsvinder o",
+      "pii_labels_above_0_5": {},
+      "model_predicted_pii": {
+        "regex": false,
+        "crf": false,
+        "svm": false
+      },
+      "model_confidence_scores": {
+        "regex": 0.0,
+        "crf": 9.7e-05,
+        "svm": 0.0
+      }
+    },
+    {
+      "mail_index": 57,
+      "mail_preview": "Hej supportteam,  Søgefunktionen giver til tider ingen resultater, selv når relevante oplysninger burde være tilgængelig",
+      "pii_labels_above_0_5": {},
+      "model_predicted_pii": {
+        "regex": false,
+        "crf": false,
+        "svm": false
+      },
+      "model_confidence_scores": {
+        "regex": 0.0,
+        "crf": 0.00023,
+        "svm": 0.0
+      }
+    },
+    {
+      "mail_index": 58,
+      "mail_preview": "Hello Support Team,  The platform logged me out unexpectedly while I was reviewing several pages. After signing back in,",
+      "pii_labels_above_0_5": {},
+      "model_predicted_pii": {
+        "regex": false,
+        "crf": false,
+        "svm": false
+      },
+      "model_confidence_scores": {
+        "regex": 0.0,
+        "crf": 6.5e-05,
+        "svm": 0.0
+      }
+    },
+    {
+      "mail_index": 59,
+      "mail_preview": "Hi,  I noticed a small visual issue on the settings page where one of the dropdown menus overlaps with nearby text eleme",
+      "pii_labels_above_0_5": {},
+      "model_predicted_pii": {
+        "regex": false,
+        "crf": false,
+        "svm": false
+      },
+      "model_confidence_scores": {
+        "regex": 0.0,
+        "crf": 7.6e-05,
+        "svm": 0.0
+      }
+    },
+    {
+      "mail_index": 60,
+      "mail_preview": "Hello,  I wanted to follow up regarding a previously submitted request. There has not been any visible update in the das",
+      "pii_labels_above_0_5": {},
+      "model_predicted_pii": {
+        "regex": false,
+        "crf": false,
+        "svm": false
+      },
+      "model_confidence_scores": {
+        "regex": 0.0,
+        "crf": 0.000111,
+        "svm": 0.0
+      }
+    }
+  ]
+}
