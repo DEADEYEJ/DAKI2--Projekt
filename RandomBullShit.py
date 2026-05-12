@@ -1,4 +1,4 @@
-#Hybrid PII Detection Model combining Regex, CRF, and SVM.
+#RandomBullShit
 
 import pickle
 import numpy as np
@@ -12,7 +12,7 @@ warnings.filterwarnings("ignore")
 with open("pkl-Filer/crf_pii_model_v5.pkl", "rb") as f:
     crf = pickle.load(f)
 
-with open("pkl-Filer/svm_pii_model.pkl","rb") as f:
+with open("pkl-Filer/svm_pii_classifier.pkl","rb") as f:
     svm = pickle.load(f)
 
 def text_to_features(text):
@@ -30,24 +30,12 @@ def crf_score(model, text):
 
 def svm_score(model, text, target_label=None):
     try:
-        preds = model.predict([text])
-        if not preds:
-            return 0.5
-        pred = preds[0]
-        # Expected PIIClassifier format
-        if isinstance(pred, dict):
-            label = pred.get("label")
-            confidence = pred.get("confidence", 0.5)
-            # If asking for specific label
-            if target_label is not None:
-                if label == target_label:
-                    return float(confidence)
-                return 0.0
-            return float(confidence)
-        # Numeric fallback
-        if isinstance(pred, (int, float, np.number)):
-            return float(pred)
-        return 0.5
+        probs = model.predict_proba([text])[0]
+        if target_label is not None and target_label in model.classes_:
+            idx = list(model.classes_).index(target_label)
+            return probs[idx]
+        return max(probs)
+    
     except Exception:
         import traceback
         traceback.print_exc()
